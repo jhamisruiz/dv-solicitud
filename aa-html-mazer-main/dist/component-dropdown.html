@@ -1,0 +1,24 @@
+ 
+$select ="";
+$idmara="";
+$select = array("*" => "*");
+$tables = array("marca" => "");
+$where = array(
+"id" => "=" . $produc[10],
+"nombre" => "='" . $produc[11] . "'"
+);
+$marca = ControllerQueryes::SELECT($select, $tables, $where);
+if (count($marca)==0) {
+$insert = "";
+$insert = array(
+"table"=>"marca",
+"nombre"=> $produc[11],
+"LASTID" => "TRUE",
+);
+$idmarca = ControllerQueryes::INSERT($insert);
+$idmara= ["id_marca"=> $idmarca];
+}else{
+$idmara=["id_marca"=> $produc[10]];
+}
+
+//$insert= $insert + $idmara;
