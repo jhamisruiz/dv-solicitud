@@ -35,7 +35,7 @@ require_once "app/php/functions.php";
 
 
 /* =====================================================================
-        CONTROLLER main app
+        CONTROLLER main appadasds
 ========================================================================*/
 require_once "app/controllers/main.C.php";
 
